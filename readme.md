@@ -102,6 +102,4 @@ and check using strncmp for both id and password.
 we want to update the students’ marks.
 12. While updating the marks use have used fseek and fprint command.
 
-![Login Window](image.png)
 
-![Packet monitoring](image-1.png)
