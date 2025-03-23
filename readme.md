@@ -1,48 +1,61 @@
- Following tasks have been performed
-Client will connect to server and logon through username and password pre-stored on
-server. Server will
-refuse connection without proper authentication.
-If client is logged on using 'instructor' as username, it will have access to marks of all
+-> Following tasks have been performed:-
+
+-Client will connect to server and logon through username and password pre-stored on
+server. Server will refuse connection without proper authentication.
+
+-If client is logged on using 'instructor' as username, it will have access to marks of all
 the students in the class.
-If client is any other user '<username>' (i.e. client is student) it will have access to
+
+-If client is any other user '<username>' (i.e. client is student) it will have access to
 his/her marks only.
-Client (student) should be able to get information about:
+
+-Client (student) should be able to get information about:
 o His/her marks in each subject
 o Aggregate percentage
 o Subjects with maximum and minimum marks
-Client (instructor) should be able to get information about:
+
+-Client (instructor) should be able to get information about:
 o Marks (individual and aggregate percentage) of each student
 o Class average
 o Number of students failed (passing percentage 33.33%) in each subject
 o Name of best and worst performing students
-Instructor can update the marks of any student if he/she finds
+
+-Instructor can update the marks of any student if he/she finds
 a bug (or need for correction). Therefore, create a menu having option ‘Update’
 for ‘Instructor’ login to update marks of a particular student in a subject.
-Create ‘student_marks’ file that contains marks of each student and is accessed by
+
+-Created ‘student_marks’ file that contains marks of each student and is accessed by
 server for responding to client queries.
-Create ‘user_pass’ file to hold data for usernames and passwords (with at least 20
+
+-Created ‘user_pass’ file to hold data for usernames and passwords (with at least 20
 users). This file is accessed by server for authentication
-Create menu to select required information from client, either at client side or server
+
+-Created menu to select required information from client, either at client side or server
 side.
-Using Wireshark, analyse packet size and frame size in different TCP/IP layers. Also
+
+-Using Wireshark, analyse packet size and frame size in different TCP/IP layers. Also
 trace the communication path between client and server machines and find the
 number of hops used for communications. Comment on all the observations.
 
 
-Client
-A client is a program that runs on the local machine requesting service from the server. A
+->Client
+
+>>A client is a program that runs on the local machine requesting service from the server. A
 client program is a finite program means that the service started by the user and terminates
 when the service is completed.
-The steps involved in establishing a socket on theclient side are as follows:
+
+>>The steps involved in establishing a socket on theclient side are as follows:
 1. Create a socket with the socket() system call
 2. Connect the socket to the address of the server using the connect() system call
 3. Send and receive data. There are a number of ways to do this, but the
 simplest is to use the read() and write() system calls.
-Server
-A server is a program that runs on the remote machine providing services to the clients.
+
+->Server
+>>A server is a program that runs on the remote machine providing services to the clients.
 When the client requests for a service, then the server opens the door for the incoming
 requests, but it never initiates the service.
-A server program is an infinite program means that when it starts, it runs infinitely unless the
+
+>>A server program is an infinite program means that when it starts, it runs infinitely unless the
 problem arises. The server waits for the incoming requests from the clients. When the request
 arrives at the server, then it responds to the request.
 The steps involved in establishing a socket on the server side are as follows:
@@ -55,7 +68,7 @@ until a client connects with the server.
 5. Send and receive data
 
 
-Algorithm and Application
+>>Algorithm and Application
 1. First server will ask that if you are a student or an instructor or an instructor who can
 change student marks.
 2. If you are a student then:
